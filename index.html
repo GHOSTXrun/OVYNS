@@ -576,7 +576,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
       </div>
 
       <div class="prose">
-        
+
         <p>This is a Solana token whose price is set by a piece of math that <strong>no one alive picked</strong>.</p>
 
         <p>In 1761 an English country minister named Thomas Bayes wrote a single page about how to revise what you believe when new evidence arrives. He died before publishing it. His friend Richard Price found the manuscript in a drawer two years later and mailed it to the Royal Society. Nobody understood it for the next hundred years.</p>
@@ -615,7 +615,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
         <p>The protocol begins life with the maximum possible uncertainty — <strong>8 bits</strong>. The simplest way to picture a bit is as a yes/no question: 8 bits of uncertainty means it would take 8 well-chosen yes/no questions to nail down the price. As trades come in, that uncertainty shrinks. <strong>Every bit the protocol learns roughly halves the range of plausible prices</strong>. Growth is measurable in these bits.</p>
 
         <p>The uncertainty never reaches zero. The protocol caps its own confidence at <strong>1 bit of irreducible humility</strong> — the floor below which it refuses to claim certainty about a price set by free people who can always do something it has never seen. <strong>It is allowed to be confident. It is not allowed to be certain.</strong></p>
-        
+
 
               </div>
     </section>
@@ -639,7 +639,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
           </div>
           <p style="font-size:12px;color:var(--text-3);margin:10px 0 0;line-height:1.6;">
             The protocol's current belief about the true price, expressed as a probability density over 256 discrete price levels. The single peak is the MAP estimate. The width is the protocol's confidence. Every swap slightly redistributes this curve.
-            
+
           </p>
         </div>
 
@@ -656,7 +656,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
           </div>
           <p style="font-size:12px;color:var(--text-3);margin:10px 0 0;line-height:1.6;">
             Shannon entropy of the posterior, measured in bits. Starts at 8.00 (maximum ignorance, uniform prior over 256 bins). Trends downward monotonically as evidence accumulates. The small bumps are moments of <em>surprise</em> — the protocol learning it knew less than it thought.
-            
+
           </p>
         </div>
       </div>
@@ -675,7 +675,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
           </div>
           <p style="font-size:12px;color:var(--text-3);margin:10px 0 0;line-height:1.6;">
             The protocol's MAP estimate (lighter line) tracked against actual swap prices (darker dots). When the two converge, the protocol has converged on the market. When they diverge, the protocol is about to be surprised — or the market is.
-            
+
           </p>
         </div>
 
@@ -692,7 +692,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
           </div>
           <p style="font-size:12px;color:var(--text-3);margin:10px 0 0;line-height:1.6;">
             95% credible interval around the MAP. Narrows over time as the protocol learns. Widens sharply during surprises — the protocol's public admission that it does not yet know enough to trade you a tight spread.
-            
+
           </p>
         </div>
       </div>
@@ -711,7 +711,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
           </div>
           <p style="font-size:12px;color:var(--text-3);margin:10px 0 0;line-height:1.6;">
             How much each swap moved the posterior, measured in KL divergence (nats). Tall bars are the trades that taught the protocol the most. Most trades are small confirmations; a few are events.
-            
+
           </p>
         </div>
 
@@ -728,7 +728,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
           </div>
           <p style="font-size:12px;color:var(--text-3);margin:10px 0 0;line-height:1.6;">
             A single number from 0% (uniform prior, knows nothing) to 100% (degenerate posterior, knows everything — unreachable). The protocol's lifetime maturity. Never reaches 100% because it caps its own confidence at 1 bit of irreducible humility.
-            
+
           </p>
         </div>
       </div>
@@ -958,7 +958,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
           </div>
           <p style="font-size:12px;color:var(--text-3);margin:10px 0 0;line-height:1.6;">
             After every surprise, entropy spikes then decays. This chart overlays all 23 historical surprises aligned at t=0 (the surprise itself) and shows the mean trajectory. The shaded band is one standard deviation. The dashed line at zero is "fully recovered." On average the protocol re-stabilises in 12 trades.
-            
+
           </p>
         </div>
 
@@ -975,7 +975,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
           </div>
           <p style="font-size:12px;color:var(--text-3);margin:10px 0 0;line-height:1.6;">
             A heat strip across the 256 price levels. Each cell is shaded by how far that level's posterior has moved from the initial flat prior. Dark = much learned. Pale = the protocol still has not seen evidence touching this region. The shape is the chain's accumulated knowledge, made visible.
-            
+
           </p>
         </div>
       </div>
@@ -994,7 +994,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
           </div>
           <p style="font-size:12px;color:var(--text-3);margin:10px 0 0;line-height:1.6;">
             When the protocol says "95% of trades will fall inside this band," does that actually happen 95% of the time? The dashed diagonal is perfect calibration. The solid line is what actually happens. Below the line means the protocol overstates its confidence; above means it understates. The bayes update under correct likelihood is automatically calibrated in the limit, but the limit is far.
-            
+
           </p>
         </div>
 
@@ -1011,17 +1011,17 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
           </div>
           <p style="font-size:12px;color:var(--text-3);margin:10px 0 0;line-height:1.6;">
             A density curve over the price axis showing where the protocol expects the next swap to occur, given its current posterior. The dot is where the last actual swap landed. Every new trade is a free test: was the protocol's prediction good? Over time the rolling hit rate becomes the cleanest single measure of whether the protocol is actually thinking.
-            
+
           </p>
         </div>
       </div>
 
       <div class="essay" style="margin-top: 2.5rem;">
-        
+
           <h2>on healing</h2>
           <p>a bayesian system that cannot be surprised is not learning. a bayesian system that can be surprised but does not recover is broken. the property that makes the rule useful is not that the posterior moves — it is that the posterior moves <em>by the right amount</em>, neither over-correcting in panic nor under-correcting out of stubbornness. cox's theorem proves that this right amount exists and is unique. the protocol is a finite-state-machine attempt to compute that right amount.</p>
           <p>the four charts above are the four ways this can be checked from the outside. recovery measures whether the protocol metabolises new evidence at a sane rate. prior decay measures whether the original ignorance has been replaced by something earned. calibration measures whether the confidence the protocol expresses publicly is the confidence it has actually demonstrated. live forecast measures whether the protocol can predict the future of its own market well enough to be paid attention to. none of these can be faked, because none of them are quantities the protocol controls — they are quantities the chain produces, and the program merely reports.</p>
-        
+
               </div>
 
       <script>
@@ -1379,7 +1379,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
 
       <p style="font-size:12px;color:var(--text-3);margin:1.5rem 0 0;max-width:680px;line-height:1.7;">
         The four entries above are not the protocol's corrections &mdash; they are the corrections that produced the rule the protocol obeys. Once trading begins, the fifth entry fills in, and the sixth, and every contradiction after that. Append-only by program logic; no admin key exists that could ever remove one.
-        
+
       </p>
     </section>
 
@@ -1422,37 +1422,37 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
 
       <p style="font-size:13px;color:var(--text-2);max-width:680px;margin:1rem 0 0;line-height:1.7;">
         The entire path executes inside a single Solana transaction. The posterior update is atomic with the transfer &mdash; there is no slot in which a sophisticated actor can see the trade execute and front-run the protocol's belief update. The hook either completes or the swap reverts.
-        
+
       </p>
 
       <h2 style="font-size:14px;letter-spacing:0.04em;color:var(--text-3);text-transform:lowercase;font-weight:500;margin-top:3rem;">why meteora, not pump.fun</h2>
 
       <div class="prose" style="max-width:680px;">
-        
+
           <p>Pump.fun supports creating Token-2022 mints via its <code>create_v2</code> instruction. It does not, as of this protocol's deployment, invoke transfer hook CPI from inside its bonding curve swap logic. Even if you grind a Token-2022 mint with a transfer hook extension and successfully register it on pump.fun, the hook will never fire when a user swaps against the bonding curve. The protocol would be inert.</p>
           <p>Meteora DLMM is currently the one Solana AMM that exposes transfer hook invocation as a first-class feature. Its swap instruction explicitly resolves <code>extra_account_metas</code> and CPIs into the hook program before the transfer settles. This is the only swap venue on Solana where OVYNS can be both deployed and functional. Every other choice was eliminated by mechanism, not by preference.</p>
           <p>If pump.fun's program is ever upgraded to invoke transfer hooks, this protocol does not benefit &mdash; the deployed mint is bound to the Meteora pool whose address is stamped into the posterior account at initialisation, and that address cannot be changed after first swap. The choice is permanent.</p>
-        
+
               </div>
 
       <h2 style="font-size:14px;letter-spacing:0.04em;color:var(--text-3);text-transform:lowercase;font-weight:500;margin-top:3rem;">why the address still ends in pump</h2>
 
       <div class="prose" style="max-width:680px;">
-        
+
           <p>The mint address was generated with <code>solana-keygen grind --ends-with pump</code>. It took about six hours on a single GPU. The cost was the electricity. The benefit is one specific traffic pattern: Solana's third-party scanners &mdash; Photon, BullX, Axiom, Dexscreener's pump-fun feed &mdash; default to indexing mints whose addresses end in <code>pump</code>, because that is the convention pump.fun's own factory produces. The mint is visible to those scanners without any registration or listing on pump.fun itself.</p>
           <p>The protocol takes nothing from pump.fun and gives nothing back. It does not use pump.fun's bonding curve, does not migrate through pump.fun's graduation path, does not pay pump.fun's fee, and is not searchable on pump.fun's homepage. It rides the same naming convention because the convention is free and the naming convention is the only part of pump.fun that this protocol could not have replicated by writing its own program.</p>
           <p>This is disclosed here, on this page, because the protocol's invariant is that nothing about it should be inferable only from what someone wants you to believe. The pump suffix is a vanity. The Meteora pool is the substance. Both are on chain. Both are checkable.</p>
-        
+
               </div>
 
       <h2 style="font-size:14px;letter-spacing:0.04em;color:var(--text-3);text-transform:lowercase;font-weight:500;margin-top:3rem;">what was considered and rejected</h2>
 
       <div class="prose" style="max-width:680px;">
-        
+
           <p>The most aggressive version of this protocol would have shipped as two tokens. A standard SPL token launched on pump.fun's bonding curve in the usual way, and a Token-2022 mint with the OVYNS hook deployed at the moment of graduation, with a permanent 1:1 wrapper bridging the two. The public token captures the natural launchpad virality; the wrapped token captures the protocol mechanism; the graduation event becomes a second launch beat. On paper it is more complete.</p>
           <p>It was rejected for three reasons. The wrapper contract becomes its own attack surface, and the deployer cannot in good conscience hand the protocol to its users while sitting on a permission-bearing bridge they cannot fully audit before deployment. The dual-token presentation reads, to most retail observers, as a pattern often used by rugpulls &mdash; extra contracts, extra wallets, extra abstraction &mdash; and the protocol's only defence against that interpretation would be more communication, which contradicts the rest of the design. And the operational complexity quadruples: two mints, one hook program, one wrapper program, two pools, two front-ends, two sets of monitoring, and a small but real risk of liquidity fragmentation between the public and wrapped versions.</p>
           <p>The current architecture chooses the simpler thing. A single mint, on a single venue that supports the mechanism end-to-end, with an address that earns the pump suffix's traffic without entering pump.fun's contract surface. This is a smaller object than the wrapper variant would have been, and the smallness is the point. If the protocol succeeds and the community asks for a wrapper at scale, that is a v2 problem to be solved by whoever the protocol belongs to then, not by the wallet that is about to be emptied.</p>
-        
+
               </div>
 
       <h2 style="font-size:14px;letter-spacing:0.04em;color:var(--text-3);text-transform:lowercase;font-weight:500;margin-top:3rem;">what can never be changed</h2>
@@ -1495,7 +1495,7 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
 
       <p style="font-size:12px;color:var(--text-3);margin:1.5rem 0 0;max-width:680px;line-height:1.7;">
         Each row above is a single solscan link away from being verified by anyone. Verification links will be added to this page after deployment. Until then, the contract address shown in the banner at the top of every page is the only on-chain artifact, and that artifact will not exist yet. Nothing on this page is true before the deployment transaction lands.
-        
+
       </p>
 
     </section>
@@ -1757,7 +1757,7 @@ declare_id!(<span class="s">"JayneSLogicScienceProgRamAddRess111111111111"</span
 
       <p style="font-size:12px;color:var(--text-3);margin:1.5rem 0 0;max-width:680px;line-height:1.7;">
         The program is deployed through the BPF upgradeable loader with its upgrade authority set to <code>None</code> at deployment. The bytecode at the address above is fixed. The constants <code>H_MAX_FP</code>, <code>H_FLOOR_FP</code>, <code>SIGMA_FP</code>, and the bin range are baked into the binary. No multisig, no DAO, no proxy, no governance hook. The only variable is the posterior, and the posterior is whatever the chain has produced.
-        
+
       </p>
 
     </section>
@@ -1769,7 +1769,7 @@ declare_id!(<span class="s">"JayneSLogicScienceProgRamAddRess111111111111"</span
       <p class="subtitle">Notes from the wallet that deployed the protocol, written in the same console session as the deployment, before that wallet was emptied.</p>
 
       <div class="prose" style="max-width: 720px; font-size: 15px; line-height: 1.95;">
-        
+
           <p>The deployment transaction landed on Solana mainnet, and within the next sixty minutes the keypair that had signed it was destroyed. The wallet address still exists &mdash; it can be looked up on solscan, the same way any address can be looked up. Its signing capability does not, and cannot be reconstructed by anyone, including me. <strong>From the moment the keypair burned, the protocol stopped having an administrator.</strong> It has not had one since.</p>
 
           <p>What follows from that is a list of things this protocol does not have, and the list happens to cover almost everything a token protocol normally has. It has no team, because there is no one with the authority to act for it. It has no treasury, because no balance was ever held back for one. It has no roadmap, because no one can change the program to follow a roadmap. It has no governance, no DAO, no foundation, no support inbox, no marketing budget, no community manager, no listing campaign, no future version. <strong>The Twitter account linked in the sidebar will post the contract address and the link to this site once, and after that it will be silent.</strong> Any later post you see from somewhere that claims to be the project is not the project.</p>
@@ -1781,7 +1781,7 @@ declare_id!(<span class="s">"JayneSLogicScienceProgRamAddRess111111111111"</span
           <p>This page is a record, not an argument. It cannot stop the protocol from being copied, forked, parodied, accused of things, or quietly misrepresented by accounts that have no relationship to it. It can only state what was and was not done at the moment the protocol entered the chain. <strong>Everything you encounter after the deployment date that claims to speak for the protocol &mdash; a new social account, an "official" telegram, a fresh medium post, a recovered statement, a press release &mdash; is not from here.</strong> By then, the wallet that wrote this notice will have been an empty address for some time, and an empty address has nothing to say.</p>
 
           <p>The only thing the deployer still owes the protocol, and the only thing this page is a placeholder for, is silence after the fact. That is the obligation that survives the wallet.</p>
-        
+
 
               </div>
 
