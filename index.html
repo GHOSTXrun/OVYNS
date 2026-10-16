@@ -474,7 +474,8 @@ body{isolation:isolate;background:#030403}#ovyns-fx{position:fixed;inset:0;width
 
 <div class="ca-banner">
   <span class="ca-label">$OVYNS contract (Solana):</span>
-  <code id="ca-code">TBA</code>
+  <code id="ca-code">6Hv2fbmmrzxcoqoUkdrGWY5UcFiFpMuuhiTazeXYpump</code>
+  <button type="button" onclick="navigator.clipboard.writeText(document.getElementById('ca-code').textContent).then(() => { this.textContent = 'copied'; setTimeout(() => { this.textContent = 'copy'; }, 1500); }).catch(() => { this.textContent = 'select CA to copy'; });">copy</button>
 </div>
 
 
